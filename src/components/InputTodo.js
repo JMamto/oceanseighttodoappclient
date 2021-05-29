@@ -16,7 +16,7 @@ const InputTodo = ({uid}) => {
             if(check === true){
                 console.log('public')
                 const body = {todo_name, description, date};
-                    await fetch("http://localhost:5000/todos",{
+                    await fetch("https://oceanseighttodoappclient.herokuapp.com/todos",{
                     method: "POST",
                     headers: {"Content-Type": "application/json"},
                     body: JSON.stringify(body)  
@@ -26,7 +26,7 @@ const InputTodo = ({uid}) => {
             }else{
                 console.log('private')
                 const body = {uid, todo_name, description, date};
-                    await fetch("http://localhost:5000/todos",{
+                    await fetch("https://oceanseighttodoappclient.herokuapp.com/todos",{
                     method: "POST",
                     headers: {"Content-Type": "application/json"},
                     body: JSON.stringify(body)  

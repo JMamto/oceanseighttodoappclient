@@ -35,14 +35,14 @@ function App() {
       }else if (emailReg.length !== 0 && passReg.length !== 0){
           
         if(isValidEmail(emailReg)){
-          Axios.post('http://localhost:5000/getRegister',{
+          Axios.post('https://oceanseighttodoappclient.herokuapp.com/getRegister',{
             emailReg:emailReg,
             
             }).then((response) => {
                 if(response.data.length > 0){
                   setRegisterStatus('Email already exists');
                 }else{
-                  Axios.post('http://localhost:5000/register',{
+                  Axios.post('https://oceanseighttodoappclient.herokuapp.com/register',{
                     emailReg: emailReg,
                     passReg: passReg,
                     }).then((response) => {
@@ -68,7 +68,7 @@ function App() {
         }else if(email.length === 0 && password.length !== 0){
           setLoginStatus('Enter email')
         }else{
-          Axios.post('http://localhost:5000/getLogin',{
+          Axios.post('https://oceanseighttodoappclient.herokuapp.com/getLogin',{
             email: email,
             password: password,
         
@@ -80,7 +80,7 @@ function App() {
                 setLoginStatus('User does not exist!')
             }else{
               if(email === response.data.rows[0].email && password === response.data.rows[0].password){
-                Axios.post('http://localhost:5000/login',{
+                Axios.post('https://oceanseighttodoappclient.herokuapp.com/login',{
                   email: email,
                   password: password,
                 }).then((reponse) => {

@@ -29,7 +29,7 @@ const Register = ({setAuth}) => {
         try {
             const body = {name, email, password}
             //console.log(name, email, password)
-            const response = await fetch('https://oceanseighttodoappclient.herokuapp.com/auth/register',{
+            const response = await fetch('https://oceanseighttodoappserver.herokuapp.com/auth/register',{
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(body)

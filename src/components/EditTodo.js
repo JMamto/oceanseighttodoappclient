@@ -28,7 +28,7 @@ const EditTodo = ({todo}) => {
         e.preventDefault();
         try {
             const body = {todo_name, description, date, status};
-            const response = await fetch(`https://oceanseighttodoappclient.herokuapp.com/todos/${todo.todo_id}`,{
+            const response = await fetch(`https://oceanseighttodoappserver.herokuapp.com/todos/${todo.todo_id}`,{
 
                 method: "PUT",
                 headers: {"Content-Type":  "application/json"},

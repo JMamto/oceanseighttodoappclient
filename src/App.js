@@ -29,7 +29,7 @@ function App() {
 
   async function isAuth(){
     try {
-        const response = await fetch("https://oceanseighttodoappclient.herokuapp.com/auth/is-verify",{
+        const response = await fetch("https://oceanseighttodoappserver.herokuapp.com/auth/is-verify",{
           method: "GET",
           headers: {token: localStorage.token}
 
